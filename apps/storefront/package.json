@@ -1,0 +1,23 @@
+{
+  "name": "@hurc/storefront",
+  "version": "0.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint src",
+    "test": "echo 'tests added in Phase 9'",
+    "test:e2e": "echo 'playwright wired in Phase 9'",
+    "dev": "echo 'Next.js dev server wired in Phase 4'",
+    "clean": "rm -rf dist .next .turbo *.tsbuildinfo"
+  },
+  "devDependencies": {
+    "@hurc/config-eslint": "workspace:*",
+    "@hurc/config-tsconfig": "workspace:*",
+    "@hurc/config-tailwind": "workspace:*",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}

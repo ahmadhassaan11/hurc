@@ -1,0 +1,11 @@
+node_modules
+dist
+build
+.next
+.turbo
+coverage
+pnpm-lock.yaml
+**/generated.ts
+**/*.generated.ts
+playwright-report
+test-results

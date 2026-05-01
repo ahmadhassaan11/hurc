@@ -1,0 +1,16 @@
+{
+  "name": "@hurc/config-tsconfig",
+  "version": "0.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "files": [
+    "base.json",
+    "nextjs.json",
+    "node.json",
+    "react-library.json"
+  ],
+  "scripts": {
+    "typecheck": "echo 'no-op (config-only package)'",
+    "lint": "echo 'no-op (config-only package)'"
+  }
+}

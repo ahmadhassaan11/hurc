@@ -1,0 +1,54 @@
+/* HURC design tokens — Tailwind v4 @theme block.
+ * Imported by apps via:   @import '@hurc/config-tailwind/tokens.css';
+ *
+ * Dark is default; a [data-theme="light"] override flips semantic surfaces.
+ */
+
+@theme {
+  /* Brand */
+  --color-brand-black: #0a0a0a;
+  --color-brand-white: #ffffff;
+  --color-brand-accent: #e63946;
+
+  /* Ink scale */
+  --color-ink-900: #0a0a0a;
+  --color-ink-700: #1a1a1a;
+  --color-ink-500: #3a3a3a;
+  --color-ink-300: #6b6b6b;
+  --color-ink-100: #b5b5b5;
+
+  /* Surfaces */
+  --color-surface-900: #0a0a0a;
+  --color-surface-800: #111111;
+  --color-surface-700: #1a1a1a;
+  --color-surface-100: #f6f6f6;
+  --color-surface-50: #ffffff;
+
+  /* Semantic — dark default */
+  --color-bg: var(--color-surface-900);
+  --color-fg: var(--color-surface-50);
+  --color-muted: var(--color-ink-100);
+  --color-line: rgba(255, 255, 255, 0.08);
+  --color-accent: var(--color-brand-accent);
+
+  /* Type */
+  --font-display: 'Bricolage Grotesque', Geist, system-ui, sans-serif;
+  --font-body: Inter, system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  /* Motion */
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 320ms;
+  --duration-cinematic: 600ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-decelerate: cubic-bezier(0, 0, 0.2, 1);
+  --ease-accelerate: cubic-bezier(0.4, 0, 1, 1);
+}
+
+[data-theme='light'] {
+  --color-bg: var(--color-surface-50);
+  --color-fg: var(--color-surface-900);
+  --color-muted: var(--color-ink-500);
+  --color-line: rgba(10, 10, 10, 0.08);
+}

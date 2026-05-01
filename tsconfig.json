@@ -1,0 +1,15 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./packages/config-tsconfig" },
+    { "path": "./packages/utils" },
+    { "path": "./packages/ui" },
+    { "path": "./packages/graphql" },
+    { "path": "./packages/analytics" },
+    { "path": "./packages/email" },
+    { "path": "./packages/testing" },
+    { "path": "./packages/config-tailwind" },
+    { "path": "./apps/backend" },
+    { "path": "./apps/storefront" }
+  ]
+}
