@@ -1,0 +1,157 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+env:
+  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+  TURBO_TEAM: ${{ vars.TURBO_TEAM }}
+  # Storefront prod-mode env validation requires these; placeholders are
+  # acceptable in CI because the build/server is never exposed beyond the
+  # runner. Real values flow via Doppler in stg/prd.
+  NEXT_PUBLIC_VENDURE_SHOP_API_URL: http://localhost:3001/shop-api
+  VENDURE_SHOP_API_URL_INTERNAL: http://localhost:3001/shop-api
+  NEXT_PUBLIC_SITE_URL: http://localhost:3100
+  NEXT_PUBLIC_PLAUSIBLE_DOMAIN: hurc.test
+  NEXT_PUBLIC_POSTHOG_KEY: phc_ci
+  NEXT_PUBLIC_POSTHOG_HOST: https://eu.posthog.com
+
+jobs:
+  setup:
+    name: Setup
+    runs-on: ubuntu-24.04
+    outputs:
+      pnpm-store-path: ${{ steps.pnpm-cache.outputs.path }}
+      playwright-version: ${{ steps.pw.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.0.3
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - name: pnpm install
+        run: pnpm install --frozen-lockfile
+      - name: Capture Playwright version
+        id: pw
+        run: |
+          VERSION=$(node -p "require('./apps/storefront/package.json').devDependencies['@playwright/test']")
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+      - name: Capture pnpm store path
+        id: pnpm-cache
+        run: echo "path=$(pnpm store path --silent)" >> "$GITHUB_OUTPUT"
+
+  quality:
+    name: Typecheck + Lint
+    runs-on: ubuntu-24.04
+    needs: setup
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.0.3
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm lint
+
+  unit:
+    name: Unit + Integration Tests
+    runs-on: ubuntu-24.04
+    needs: setup
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.0.3
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+
+  build:
+    name: Build
+    runs-on: ubuntu-24.04
+    needs: setup
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.0.3
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: storefront-build
+          path: apps/storefront/.next
+          if-no-files-found: error
+          retention-days: 1
+
+  e2e:
+    name: E2E (Playwright)
+    runs-on: ubuntu-24.04
+    needs: [setup, build]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.0.3
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - uses: actions/download-artifact@v4
+        with:
+          name: storefront-build
+          path: apps/storefront/.next
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ms-playwright-${{ runner.os }}-${{ needs.setup.outputs.playwright-version }}
+      - name: Install chromium
+        run: pnpm --filter @hurc/storefront exec playwright install --with-deps chromium
+      - name: Run Playwright
+        run: pnpm --filter @hurc/storefront test:e2e
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report
+          path: apps/storefront/playwright-report/
+          retention-days: 14
+
+  coverage:
+    name: Coverage
+    runs-on: ubuntu-24.04
+    needs: setup
+    if: github.event_name == 'push' || contains(github.event.pull_request.labels.*.name, 'coverage')
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.0.3
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test:coverage

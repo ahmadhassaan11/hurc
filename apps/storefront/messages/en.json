@@ -1,0 +1,548 @@
+{
+  "common": {
+    "brand": "HURC",
+    "tagline": "Hustle Unleashed, Resilience Crafted",
+    "skipToContent": "Skip to content",
+    "loading": "Loading…",
+    "home": "Home",
+    "account": "Account",
+    "language": "Language",
+    "openMenu": "Open menu",
+    "navMenu": "Primary navigation",
+    "cart": "{count, plural, =0 {Cart} =1 {Cart, 1 item} other {Cart, # items}}",
+    "cartTitle": "Your cart"
+  },
+  "nav": {
+    "run": "Run",
+    "train": "Train",
+    "yoga": "Yoga",
+    "studio": "Studio",
+    "collections": "Collections",
+    "editorial": "Editorial",
+    "sale": "Sale"
+  },
+  "home": {
+    "hero": {
+      "title": "Built for movement.",
+      "subtitle": "Premium European activewear engineered for athletes who treat training as a craft.",
+      "shop": "Shop the line",
+      "story": "Our story"
+    },
+    "activities": {
+      "eyebrow": "Choose your discipline",
+      "title": "Every move, every day.",
+      "description": "Activity-specific construction — fabrics, panel maps and finishes tuned to the way you train.",
+      "cta": "Explore",
+      "run": {
+        "eyebrow": "Asphalt to trail",
+        "title": "Run"
+      },
+      "train": {
+        "eyebrow": "Iron and intervals",
+        "title": "Train"
+      },
+      "yoga": {
+        "eyebrow": "Slow flow, deep breath",
+        "title": "Yoga"
+      },
+      "studio": {
+        "eyebrow": "Court, cycle, climb",
+        "title": "Studio"
+      }
+    },
+    "featured": {
+      "eyebrow": "This drop",
+      "title": "Featured collections",
+      "viewAll": "View all"
+    },
+    "statement": {
+      "eyebrow": "Made in Europe",
+      "headline": "Engineered for movement, designed without compromise.",
+      "body": "Our patternmakers, fabric mills and finishing partners sit within a 1,000-kilometre radius. Shorter logistics, deeper relationships, better gear."
+    },
+    "newsletter": {
+      "eyebrow": "The Inside Lane",
+      "title": "Sign up. Stay sharp.",
+      "description": "First access to drops, training journals, and athlete features. We keep our list quiet — two emails a month, no exceptions.",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "emailError": "Please enter a valid email address.",
+      "submit": "Subscribe",
+      "submitting": "Subscribing…",
+      "consent": "We process your email address only to deliver this newsletter. Unsubscribe anytime; we never share or sell.",
+      "success": {
+        "created": "Check your inbox to confirm.",
+        "pending": "Almost there — check your inbox to confirm.",
+        "already_subscribed": "You're already on the list."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Hustle Unleashed, Resilience Crafted",
+    "localeBadge": "Shipping in {currency} · {region}",
+    "columns": {
+      "shop": {
+        "title": "Shop",
+        "items": {
+          "run": "Run",
+          "train": "Train",
+          "yoga": "Yoga",
+          "studio": "Studio",
+          "sale": "Sale"
+        }
+      },
+      "help": {
+        "title": "Help",
+        "items": {
+          "support": "Customer support",
+          "shipping": "Shipping",
+          "returns": "Returns",
+          "sizeGuide": "Size guide"
+        }
+      },
+      "brand": {
+        "title": "Brand",
+        "items": {
+          "story": "Our story",
+          "sustainability": "Sustainability",
+          "editorial": "Editorial",
+          "careers": "Careers"
+        }
+      },
+      "legal": {
+        "title": "Legal",
+        "items": {
+          "imprint": "Imprint",
+          "terms": "Terms of service",
+          "privacy": "Privacy",
+          "cookies": "Cookies",
+          "withdrawal": "Withdrawal"
+        }
+      }
+    }
+  },
+  "commerce": {
+    "plp": {
+      "home": "Home",
+      "total": "{count, plural, =0 {No products} =1 {1 product} other {# products}}",
+      "empty": "No products match yet."
+    },
+    "sort": {
+      "label": "Sort",
+      "option": {
+        "name-asc": "Name A–Z",
+        "name-desc": "Name Z–A",
+        "price-asc": "Price low to high",
+        "price-desc": "Price high to low"
+      }
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "pdp": {
+      "home": "Home",
+      "selectAllOptions": "Select all options to continue.",
+      "addToBag": "Add to bag",
+      "adding": "Adding…",
+      "added": "Added to bag."
+    },
+    "stock": {
+      "inStock": "In stock",
+      "lowStock": "Low stock",
+      "outOfStock": "Out of stock"
+    },
+    "gpsr": {
+      "title": "Product details",
+      "material": "Material composition",
+      "care": "Care instructions",
+      "sustainability": "Sustainability",
+      "manufacturer": "Manufacturer",
+      "warnings": "Warnings",
+      "traceability": "Traceability code",
+      "responsiblePerson": "EU responsible person",
+      "emptyState": "Compliance information is being prepared and will appear here once available."
+    },
+    "cart": {
+      "empty": "Your bag is empty.",
+      "continueShopping": "Continue shopping",
+      "checkout": "Checkout",
+      "decrement": "Decrease quantity",
+      "increment": "Increase quantity",
+      "remove": "Remove",
+      "coupon": {
+        "label": "Coupon code",
+        "placeholder": "ENTER CODE",
+        "apply": "Apply",
+        "applying": "Applying…",
+        "applied": "Coupon applied.",
+        "toggle": "Have a code?",
+        "remove": "Remove coupon {code}"
+      },
+      "shipping": {
+        "reached": "Free shipping unlocked.",
+        "remaining": "{amount} away from free shipping."
+      },
+      "totals": {
+        "subtotal": "Subtotal",
+        "shipping": "Shipping",
+        "shippingPending": "Calculated at checkout",
+        "total": "Total"
+      }
+    }
+  },
+  "account": {
+    "logout": "Sign out",
+    "loggingOut": "Signing out…",
+    "logoutSuccess": "Signed out.",
+    "sidebar": {
+      "title": "Account",
+      "dashboard": "Overview",
+      "profile": "Profile",
+      "addresses": "Addresses",
+      "orders": "Orders",
+      "data": "Data & privacy"
+    },
+    "dashboard": {
+      "eyebrow": "Account",
+      "greeting": "Welcome back, {firstName}.",
+      "description": "Manage your profile, addresses, orders, and privacy preferences from here."
+    },
+    "login": {
+      "title": "Sign in",
+      "description": "Welcome back. Enter your email and password to continue.",
+      "email": "Email",
+      "emailError": "Please enter a valid email address.",
+      "password": "Password",
+      "passwordError": "Password is required.",
+      "submit": "Sign in",
+      "submitting": "Signing in…",
+      "success": "Signed in.",
+      "forgotPasswordPrefix": "Forgot your password?",
+      "forgotPassword": "Reset it",
+      "noAccountPrefix": "No account yet?",
+      "register": "Create one"
+    },
+    "register": {
+      "title": "Create your account",
+      "description": "We'll send a confirmation link to verify your email.",
+      "email": "Email",
+      "emailError": "Please enter a valid email address.",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "password": "Password",
+      "passwordHelper": "At least 8 characters.",
+      "passwordError": "Password must be at least 8 characters.",
+      "phone": "Phone (optional)",
+      "phoneHelper": "For shipping updates only.",
+      "phoneError": "Please enter a valid phone number.",
+      "required": "Required.",
+      "submit": "Create account",
+      "submitting": "Creating…",
+      "success": "Check your inbox to confirm your email.",
+      "haveAccountPrefix": "Already have an account?",
+      "login": "Sign in"
+    },
+    "verify": {
+      "title": "Verify your email",
+      "checkInbox": "Check your inbox for a verification link.",
+      "verifying": "Verifying…",
+      "success": "Email verified.",
+      "successDescription": "Your account is verified. You can now use all account features.",
+      "continue": "Continue"
+    },
+    "passwordReset": {
+      "request": {
+        "title": "Reset your password",
+        "description": "Enter your email and we'll send a reset link.",
+        "email": "Email",
+        "emailError": "Please enter a valid email address.",
+        "submit": "Send reset link",
+        "submitting": "Sending…",
+        "success": "If that email is registered, a reset link is on the way."
+      },
+      "complete": {
+        "title": "Set a new password",
+        "description": "Pick a strong password you don't use elsewhere.",
+        "password": "New password",
+        "passwordHelper": "At least 8 characters.",
+        "passwordError": "Password must be at least 8 characters.",
+        "submit": "Save password",
+        "submitting": "Saving…",
+        "success": "Password updated."
+      }
+    },
+    "profile": {
+      "title": "Profile",
+      "description": "Update the details we use for shipping and order updates.",
+      "email": "Email",
+      "emailReadOnly": "Contact support to change your email.",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "phone": "Phone",
+      "required": "Required.",
+      "submit": "Save changes",
+      "submitting": "Saving…",
+      "success": "Profile updated."
+    },
+    "address": {
+      "title": "Addresses",
+      "description": "Saved addresses appear at checkout for one-click selection.",
+      "addNew": "Add a new address",
+      "empty": "You haven't saved any addresses yet.",
+      "defaultShipping": "Default shipping",
+      "defaultBilling": "Default billing",
+      "delete": "Remove",
+      "deleted": "Address removed.",
+      "created": "Address saved.",
+      "updated": "Address updated.",
+      "fullName": "Full name",
+      "company": "Company (optional)",
+      "streetLine1": "Street",
+      "streetLine2": "Apartment, suite, etc.",
+      "city": "City",
+      "province": "Region (optional)",
+      "postalCode": "Postal code",
+      "country": "Country",
+      "phone": "Phone (optional)",
+      "required": "Required.",
+      "submitting": "Saving…",
+      "addAddress": "Save address",
+      "saveChanges": "Save changes"
+    },
+    "orders": {
+      "title": "Orders",
+      "code": "Order {code}",
+      "state": "Status: {state}",
+      "items": "{count, plural, =0 {No items} =1 {1 item} other {# items}}",
+      "pending": "Pending",
+      "empty": "You haven't placed any orders yet.",
+      "detail": {
+        "eyebrow": "Order {code}",
+        "state": "Status: {state}",
+        "pending": "Order pending"
+      }
+    },
+    "gdpr": {
+      "title": "Data & privacy",
+      "description": "Export or delete the personal data we hold for you.",
+      "export": {
+        "title": "Export your data",
+        "description": "Download a ZIP of your customer profile, orders, addresses, and consent history.",
+        "cta": "Download ZIP",
+        "confirmTitle": "Export your data?",
+        "confirmBody": "We will compile a ZIP archive of every personal record we hold for you. The download starts immediately and may take up to a minute.",
+        "confirmCta": "Start export",
+        "preparing": "Preparing…",
+        "rateLimited": "You can request another export in a moment. Please wait.",
+        "failed": "We couldn't generate your export. Please try again or contact support."
+      },
+      "delete": {
+        "title": "Delete your account",
+        "description": "Permanently anonymise your data. Past orders are retained per accounting law but stripped of personal identifiers.",
+        "cta": "Delete account",
+        "confirmTitle": "Delete account?",
+        "confirmBody": "This cannot be undone. Your customer profile and addresses will be removed; past orders are anonymised but kept for accounting compliance.",
+        "cancel": "Cancel",
+        "confirm": "Yes, delete",
+        "deleting": "Deleting…",
+        "success": "Your account has been deleted.",
+        "challengeLabel": "Type {phrase} to confirm",
+        "challengePhrase": "DELETE MY ACCOUNT",
+        "challengeMismatch": "Phrase doesn't match — try again.",
+        "rateLimited": "Please wait a moment before retrying.",
+        "failed": "We couldn't delete your account. Please contact support."
+      }
+    }
+  },
+  "checkout": {
+    "steps": {
+      "customer": "Customer",
+      "shipping": "Shipping",
+      "payment": "Payment",
+      "review": "Review"
+    },
+    "customer": {
+      "title": "Your details",
+      "description": "We'll use this to send your order confirmation and updates.",
+      "email": "Email",
+      "emailError": "Please enter a valid email address.",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "phone": "Phone (optional)",
+      "required": "Required.",
+      "submit": "Continue to shipping",
+      "submitting": "Saving…"
+    },
+    "shipping": {
+      "title": "Shipping",
+      "description": "Where should we send your order?",
+      "addressTitle": "Shipping address",
+      "methodTitle": "Shipping method",
+      "methodsEmpty": "No shipping methods available for this address.",
+      "selectMethod": "Please select a shipping method.",
+      "fullName": "Full name",
+      "company": "Company (optional)",
+      "streetLine1": "Street",
+      "streetLine2": "Apartment, suite, etc.",
+      "city": "City",
+      "postalCode": "Postal code",
+      "province": "Region (optional)",
+      "country": "Country",
+      "phone": "Phone (optional)",
+      "required": "Required.",
+      "submit": "Continue to payment",
+      "submitting": "Saving…"
+    },
+    "payment": {
+      "title": "Payment",
+      "description": "Pick a payment method. You'll complete payment on the provider's secure page.",
+      "methodsTitle": "Payment method",
+      "methodsEmpty": "No payment methods available right now.",
+      "selectMethod": "Please select a payment method.",
+      "hostedRedirectNote": "You will be redirected to the payment provider to complete your purchase securely.",
+      "submit": "Continue to payment",
+      "submitting": "Redirecting…",
+      "consentRequired": "Please confirm you have read the Terms and Privacy Policy."
+    },
+    "confirmation": {
+      "title": "Order confirmed.",
+      "description": "Thank you. We've sent a receipt for order {code}.",
+      "viewOrders": "View all orders"
+    },
+    "consent": {
+      "label": "I have read the <terms>Terms of Service</terms> and the <privacy>Privacy Policy</privacy> and agree to both."
+    },
+    "withdrawal": {
+      "title": "14-day right of withdrawal",
+      "body": "You may cancel this order within 14 days of receiving the goods, no reason required. Read the <link>full withdrawal terms</link> before submitting."
+    }
+  },
+  "errors": {
+    "title": "Something went wrong",
+    "description": "We hit an unexpected issue. Please try again.",
+    "retry": "Try again",
+    "goHome": "Back to homepage",
+    "generic": "Something went wrong. Please try again.",
+    "newsletter": {
+      "INVALID_EMAIL": "Please enter a valid email address.",
+      "BOT_DETECTED": "Verification failed. Please try again.",
+      "UPSTREAM_ERROR": "We couldn't sign you up right now. Please try again in a moment."
+    },
+    "vendure": {
+      "UNKNOWN_ERROR": "Something went wrong. Please try again.",
+      "NATIVE_AUTH_STRATEGY_ERROR": "Authentication is not available right now.",
+      "INVALID_CREDENTIALS_ERROR": "Email or password is incorrect.",
+      "ORDER_STATE_TRANSITION_ERROR": "This order can't be updated right now.",
+      "EMAIL_ADDRESS_CONFLICT_ERROR": "This email is already registered.",
+      "GUEST_CHECKOUT_ERROR": "Guest checkout isn't available for this order.",
+      "ORDER_LIMIT_ERROR": "This order has reached its limit.",
+      "NEGATIVE_QUANTITY_ERROR": "Quantity can't be negative.",
+      "INSUFFICIENT_STOCK_ERROR": "Not enough stock for the requested quantity.",
+      "COUPON_CODE_INVALID_ERROR": "That coupon code isn't valid.",
+      "COUPON_CODE_EXPIRED_ERROR": "That coupon code has expired.",
+      "COUPON_CODE_LIMIT_ERROR": "That coupon code has been used too many times.",
+      "ORDER_MODIFICATION_ERROR": "This order can no longer be modified.",
+      "INELIGIBLE_SHIPPING_METHOD_ERROR": "That shipping method isn't available for your order.",
+      "NO_ACTIVE_ORDER_ERROR": "There's no active order to update.",
+      "ORDER_INTERCEPTOR_ERROR": "We couldn't process that change.",
+      "ORDER_PAYMENT_STATE_ERROR": "Payment state prevents this update.",
+      "INELIGIBLE_PAYMENT_METHOD_ERROR": "That payment method isn't available for your order.",
+      "PAYMENT_FAILED_ERROR": "Payment failed. Please try again or use another method.",
+      "PAYMENT_DECLINED_ERROR": "Payment was declined. Please try another card or method.",
+      "ALREADY_LOGGED_IN_ERROR": "You're already signed in.",
+      "MISSING_PASSWORD_ERROR": "A password is required.",
+      "PASSWORD_VALIDATION_ERROR": "That password doesn't meet our requirements.",
+      "PASSWORD_ALREADY_SET_ERROR": "A password is already set for this account.",
+      "VERIFICATION_TOKEN_INVALID_ERROR": "This verification link isn't valid.",
+      "VERIFICATION_TOKEN_EXPIRED_ERROR": "This verification link has expired.",
+      "IDENTIFIER_CHANGE_TOKEN_INVALID_ERROR": "This email-change link isn't valid.",
+      "IDENTIFIER_CHANGE_TOKEN_EXPIRED_ERROR": "This email-change link has expired.",
+      "PASSWORD_RESET_TOKEN_INVALID_ERROR": "This password reset link isn't valid.",
+      "PASSWORD_RESET_TOKEN_EXPIRED_ERROR": "This password reset link has expired.",
+      "NOT_VERIFIED_ERROR": "Please verify your email before signing in.",
+      "MOLLIE_PAYMENT_INTENT_ERROR": "We couldn't start your payment. Please try again."
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or has moved.",
+    "goHome": "Back to homepage"
+  },
+  "journal": {
+    "indexTitle": "Journal",
+    "indexEyebrow": "Stories from the line",
+    "indexDescription": "Training journals, athlete features, and process notes from the workshop.",
+    "indexEmpty": "No posts yet — check back soon.",
+    "readMore": "Read",
+    "backToIndex": "Back to journal",
+    "previousPage": "Previous",
+    "nextPage": "Next",
+    "pageIndicator": "Page {page} of {totalPages}",
+    "paginationLabel": "Pagination"
+  },
+  "story": {
+    "title": "Our story",
+    "eyebrow": "About HURC"
+  },
+  "studio": {
+    "disabled": "Editorial studio is not configured for this environment."
+  },
+  "consent": {
+    "manageButton": "Manage cookies",
+    "notice": {
+      "description": "We use cookies and similar technologies for essential site functions and, with your consent, for analytics and marketing.",
+      "learnMore": "Manage preferences"
+    },
+    "modal": {
+      "title": "Privacy preferences",
+      "description": "Choose which optional services may run while you browse. You can change this at any time from the footer."
+    },
+    "services": {
+      "functional": {
+        "title": "Functional",
+        "description": "Cart, sign-in, language and consent state. Required for the site to work — these run regardless of your choice."
+      },
+      "plausible": {
+        "title": "Plausible analytics",
+        "description": "Privacy-first, cookieless aggregate visit counts hosted in the EU. No personal data leaves the EU."
+      },
+      "posthog": {
+        "title": "Product analytics (PostHog)",
+        "description": "Helps us understand which features are used and where the site falls short. Data stays in the EU region."
+      },
+      "sentry": {
+        "title": "Error monitoring (Sentry)",
+        "description": "Captures runtime errors so we can fix them. Data stays in the EU region; no order or payment details are sent."
+      },
+      "klaviyo": {
+        "title": "Marketing (Klaviyo)",
+        "description": "Marketing emails and personalised recommendations. Data is processed in the United States under standard contractual clauses."
+      }
+    },
+    "actions": {
+      "acceptAll": "Accept all",
+      "acceptSelected": "Accept selected",
+      "decline": "Reject all",
+      "save": "Save preferences",
+      "close": "Close"
+    },
+    "privacyPolicy": {
+      "name": "privacy policy",
+      "text": "For details, see our {privacyPolicy}."
+    }
+  },
+  "legal": {
+    "shell": {
+      "eyebrow": "Legal",
+      "translationPending": "This page is currently shown in English while professional translations are pending."
+    },
+    "titles": {
+      "imprint": "Imprint",
+      "terms": "Terms of service",
+      "privacy": "Privacy policy",
+      "cookies": "Cookie policy",
+      "withdrawal": "Right of withdrawal"
+    }
+  }
+}

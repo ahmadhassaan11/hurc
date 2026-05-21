@@ -24,28 +24,23 @@ The build is delivered in 10 phases described in
 ## Quickstart
 
 ```sh
-# 1. Use Node 22 (the .nvmrc target)
-nvm use            # or: fnm use, asdf install, etc.
+# 1. Use Node 22 (the .nvmrc target) and enable pnpm
+nvm use && corepack enable
 
-# 2. Enable pnpm. The repo pins it via `packageManager`.
-corepack enable    # or: brew install pnpm
-
-# 3. Install everything
+# 2. Install everything
 pnpm install
 
-# 4. Verify the toolchain
-pnpm typecheck
-pnpm lint
-pnpm test
-
-# 5. Run dev servers (after Phase 2/4 land)
-pnpm dev
+# 3. Boot the full stack (docker data-layer + backend + storefront)
+pnpm dev:up
 ```
 
-> **Phase 1 status:** monorepo skeleton + shared configs only. Real backend
-> and storefront arrive in Phases 2 and 4. See
-> [`docs/decisions/0001-stack.md`](./docs/decisions/0001-stack.md) for the full
-> phase plan.
+`pnpm dev:up` is idempotent: copies `.env` files if missing, starts the
+docker data-layer, runs migrations + seed, then streams dev logs.
+Storefront on http://localhost:3000, Vendure admin on http://localhost:3002
+(login `superadmin` / `ChangeMe!Local`).
+
+Full guide — URLs, optional integrations, troubleshooting —
+[`docs/DEV.md`](./docs/DEV.md).
 
 ## Layout
 

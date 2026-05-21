@@ -10,22 +10,45 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
+    },
+    "./admin": {
+      "types": "./dist/admin/index.d.ts",
+      "import": "./dist/admin/index.js"
+    },
+    "./shop": {
+      "types": "./dist/shop/index.d.ts",
+      "import": "./dist/shop/index.js"
     }
   },
   "files": [
     "dist",
-    "src/*.graphql"
+    "src/**/*.graphql"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "lint": "eslint src",
-    "codegen": "echo 'codegen wired in Phase 3'",
-    "clean": "rm -rf dist .turbo *.tsbuildinfo"
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest",
+    "codegen": "graphql-codegen --config codegen.ts",
+    "introspect": "node scripts/introspect.mjs",
+    "verify-snapshot": "node scripts/verify-snapshot.mjs",
+    "clean": "rm -rf dist .turbo *.tsbuildinfo src/admin/generated src/shop/generated"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "7.0.0",
+    "@graphql-codegen/client-preset": "6.0.0",
+    "@graphql-codegen/schema-ast": "6.0.0",
     "@hurc/config-eslint": "workspace:*",
     "@hurc/config-tsconfig": "workspace:*",
-    "typescript": "^5.7.2"
+    "@vitest/coverage-v8": "4.1.5",
+    "graphql": "16.13.2",
+    "graphql-config": "5.1.6",
+    "typescript": "^5.7.2",
+    "vitest": "4.1.5"
+  },
+  "dependencies": {
+    "@graphql-typed-document-node/core": "3.2.0"
   }
 }

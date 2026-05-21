@@ -9,6 +9,11 @@
       "outputs": ["dist/**", ".next/**", "!.next/cache/**", "build/**"],
       "outputLogs": "new-only"
     },
+    "@hurc/storefront#build": {
+      "dependsOn": ["@hurc/graphql#codegen", "@hurc/storefront#codegen", "^build"],
+      "outputs": [".next/**", "!.next/cache/**"],
+      "outputLogs": "new-only"
+    },
     "dev": {
       "cache": false,
       "persistent": true
@@ -26,13 +31,42 @@
       "outputs": ["coverage/**"],
       "inputs": ["src/**", "test/**", "tests/**", "vitest.config.*", "package.json"]
     },
+    "test:coverage": {
+      "dependsOn": ["^build"],
+      "outputs": ["coverage/**"],
+      "inputs": ["src/**", "test/**", "tests/**", "vitest.config.*", "package.json"]
+    },
+    "@hurc/storefront#test:coverage": {
+      "dependsOn": ["@hurc/graphql#codegen", "@hurc/storefront#codegen", "^build"],
+      "outputs": ["coverage/**"],
+      "inputs": ["src/**", "tests/**", "vitest.config.*", "package.json", "sanity.types.ts"]
+    },
     "test:e2e": {
       "dependsOn": ["^build"],
       "cache": false,
       "outputs": ["playwright-report/**", "test-results/**"]
     },
     "codegen": {
-      "outputs": ["src/generated.ts", "src/**/*.generated.ts"]
+      "inputs": [
+        "src/schema-snapshots/**",
+        "src/admin/operations/**",
+        "src/shop/operations/**",
+        "codegen.ts"
+      ],
+      "outputs": ["src/admin/generated/**", "src/shop/generated/**"]
+    },
+    "@hurc/storefront#codegen": {
+      "inputs": ["src/sanity/**", "src/lib/sanity/queries.ts", "sanity.config.ts", "sanity.cli.ts"],
+      "outputs": ["sanity.types.ts", "schema.json"]
+    },
+    "@hurc/storefront#typecheck": {
+      "dependsOn": ["@hurc/graphql#codegen", "@hurc/storefront#codegen", "^build"],
+      "outputs": ["*.tsbuildinfo"]
+    },
+    "@hurc/storefront#test": {
+      "dependsOn": ["@hurc/graphql#codegen", "@hurc/storefront#codegen", "^build"],
+      "outputs": ["coverage/**"],
+      "inputs": ["src/**", "tests/**", "vitest.config.*", "package.json", "sanity.types.ts"]
     },
     "clean": {
       "cache": false

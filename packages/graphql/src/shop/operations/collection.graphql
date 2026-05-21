@@ -1,0 +1,50 @@
+fragment CollectionSummaryFields on Collection {
+  id
+  name
+  slug
+  position
+  parentId
+  featuredAsset {
+    ...AssetFields
+  }
+  breadcrumbs {
+    id
+    name
+    slug
+  }
+}
+
+fragment CollectionDetailFields on Collection {
+  ...CollectionSummaryFields
+  description
+  productVariantCount
+  children {
+    ...CollectionSummaryFields
+  }
+}
+
+query CollectionList($options: CollectionListOptions) {
+  collections(options: $options) {
+    items {
+      ...CollectionSummaryFields
+    }
+    totalItems
+  }
+}
+
+query CollectionBySlug($slug: String!) {
+  collection(slug: $slug) {
+    ...CollectionDetailFields
+  }
+}
+
+query CollectionTreeNav {
+  collections(options: { topLevelOnly: true, take: 50 }) {
+    items {
+      ...CollectionSummaryFields
+      children {
+        ...CollectionSummaryFields
+      }
+    }
+  }
+}

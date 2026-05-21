@@ -1,0 +1,128 @@
+fragment OrderAddressFields on OrderAddress {
+  fullName
+  company
+  streetLine1
+  streetLine2
+  city
+  province
+  postalCode
+  country
+  countryCode
+  phoneNumber
+}
+
+fragment OrderLineFields on OrderLine {
+  id
+  quantity
+  unitPriceWithTax
+  discountedUnitPriceWithTax
+  linePriceWithTax
+  discountedLinePriceWithTax
+  productVariant {
+    id
+    sku
+    name
+    price
+    priceWithTax
+    currencyCode
+    product {
+      id
+      name
+      slug
+    }
+    options {
+      id
+      code
+      name
+      groupId
+    }
+  }
+  featuredAsset {
+    ...AssetFields
+  }
+}
+
+fragment OrderSummaryFields on Order {
+  id
+  code
+  state
+  active
+  totalQuantity
+  currencyCode
+  subTotal
+  subTotalWithTax
+  shipping
+  shippingWithTax
+  total
+  totalWithTax
+  orderPlacedAt
+  couponCodes
+  lines {
+    ...OrderLineFields
+  }
+}
+
+fragment OrderDetailFields on Order {
+  ...OrderSummaryFields
+  customer {
+    id
+    firstName
+    lastName
+    emailAddress
+  }
+  shippingAddress {
+    ...OrderAddressFields
+  }
+  billingAddress {
+    ...OrderAddressFields
+  }
+  shippingLines {
+    id
+    priceWithTax
+    shippingMethod {
+      id
+      code
+      name
+      description
+    }
+  }
+  payments {
+    id
+    method
+    amount
+    state
+    transactionId
+    errorMessage
+    metadata
+  }
+  discounts {
+    description
+    amount
+    amountWithTax
+    type
+  }
+}
+
+query ActiveOrder {
+  activeOrder {
+    ...OrderDetailFields
+  }
+}
+
+query ActiveCustomerOrders($options: OrderListOptions) {
+  activeCustomer {
+    id
+    orders(options: $options) {
+      items {
+        ...OrderSummaryFields
+      }
+      totalItems
+    }
+  }
+}
+
+query OrderByCode($code: String!) {
+  orderByCode(code: $code) {
+    ...OrderDetailFields
+  }
+}

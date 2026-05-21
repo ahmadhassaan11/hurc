@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "hurc-run-tee",
+    "name": "HURC Run Tee",
+    "description": "Lightweight technical tee built for distance. Sweat-wicking knit, zero seams across the shoulders.",
+    "activity": ["RUN"],
+    "collectionSlug": "run",
+    "variants": [
+      { "skuSuffix": "XS-EU", "optionValues": ["XS"], "priceMinor": 5900, "currency": "EUR" },
+      { "skuSuffix": "S-EU", "optionValues": ["S"], "priceMinor": 5900, "currency": "EUR" },
+      { "skuSuffix": "M-EU", "optionValues": ["M"], "priceMinor": 5900, "currency": "EUR" },
+      { "skuSuffix": "L-EU", "optionValues": ["L"], "priceMinor": 5900, "currency": "EUR" },
+      { "skuSuffix": "XL-EU", "optionValues": ["XL"], "priceMinor": 5900, "currency": "EUR" },
+      { "skuSuffix": "XXL-EU", "optionValues": ["XXL"], "priceMinor": 5900, "currency": "EUR" }
+    ]
+  }
+]

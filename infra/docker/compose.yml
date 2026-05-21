@@ -1,0 +1,73 @@
+# Local-only dev stack for HURC backend. Brings up Postgres 16, Redis 7, and
+# Meilisearch 1.x with credentials matching apps/backend/.env.example so a
+# fresh `cp .env.example .env` boots without further overrides.
+#
+# Not for staging or production. Hetzner runs the same images with managed
+# secrets and persistent volumes; that compose lives in infra/ once Phase 10
+# (CI/CD) lands.
+
+name: hurc
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: hurc-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: hurc
+      POSTGRES_PASSWORD: hurc
+      POSTGRES_DB: hurc
+    ports:
+      - '5432:5432'
+    volumes:
+      - hurc-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U hurc -d hurc']
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  redis:
+    image: redis:7-alpine
+    container_name: hurc-redis
+    restart: unless-stopped
+    command: ['redis-server', '--appendonly', 'yes']
+    ports:
+      - '6379:6379'
+    volumes:
+      - hurc-redis:/data
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  meilisearch:
+    image: getmeili/meilisearch:v1.42.1
+    container_name: hurc-meilisearch
+    restart: unless-stopped
+    environment:
+      MEILI_ENV: development
+      MEILI_NO_ANALYTICS: 'true'
+      MEILI_MASTER_KEY: hurc_local_master_key_32_chars_xx
+    ports:
+      - '7700:7700'
+    volumes:
+      - hurc-meili:/meili_data
+    # Use 127.0.0.1 explicitly: busybox wget in the meili image does not
+    # happy-eyeballs, and `localhost` resolves to ::1 first inside the
+    # container while Meili only binds IPv4 → "connection refused".
+    healthcheck:
+      test:
+        - CMD
+        - sh
+        - -c
+        - 'wget -qO- http://127.0.0.1:7700/health | grep -q available'
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  hurc-postgres:
+  hurc-redis:
+  hurc-meili:
