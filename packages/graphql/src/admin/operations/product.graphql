@@ -1,0 +1,69 @@
+fragment AdminProductCardFields on Product {
+  id
+  name
+  slug
+  enabled
+  featuredAsset {
+    id
+    preview
+  }
+  customFields {
+    activity
+    traceabilityCode
+  }
+}
+
+fragment AdminProductDetailFields on Product {
+  id
+  name
+  slug
+  description
+  enabled
+  featuredAsset {
+    id
+    preview
+    source
+  }
+  variants {
+    id
+    sku
+    name
+    price
+    priceWithTax
+    stockLevels {
+      stockLocationId
+      stockOnHand
+      stockAllocated
+    }
+  }
+  customFields {
+    activity
+    materialComposition
+    careInstructions
+    sustainabilityNotes
+    manufacturerInfo
+    warnings
+    traceabilityCode
+    responsiblePerson {
+      id
+      name
+      email
+      address
+    }
+  }
+}
+
+query AdminProductList($options: ProductListOptions) {
+  products(options: $options) {
+    items {
+      ...AdminProductCardFields
+    }
+    totalItems
+  }
+}
+
+query AdminProductBySlug($slug: String!) {
+  product(slug: $slug) {
+    ...AdminProductDetailFields
+  }
+}

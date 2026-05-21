@@ -1,0 +1,57 @@
+name: Visual regression
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, labeled]
+
+concurrency:
+  group: visual-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NEXT_PUBLIC_VENDURE_SHOP_API_URL: http://localhost:3001/shop-api
+  VENDURE_SHOP_API_URL_INTERNAL: http://localhost:3001/shop-api
+  NEXT_PUBLIC_SITE_URL: http://localhost:3100
+  NEXT_PUBLIC_PLAUSIBLE_DOMAIN: hurc.test
+  NEXT_PUBLIC_POSTHOG_KEY: phc_ci
+  NEXT_PUBLIC_POSTHOG_HOST: https://eu.posthog.com
+
+jobs:
+  visual:
+    name: Playwright visual snapshots
+    runs-on: ubuntu-24.04
+    if: contains(github.event.pull_request.labels.*.name, 'visual')
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.0.3
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - name: Capture Playwright version
+        id: pw
+        run: |
+          VERSION=$(node -p "require('./apps/storefront/package.json').devDependencies['@playwright/test']")
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ms-playwright-${{ runner.os }}-${{ steps.pw.outputs.version }}-all
+      - name: Install browsers
+        run: pnpm --filter @hurc/storefront exec playwright install --with-deps chromium firefox webkit
+      - name: Run visual lane
+        run: pnpm --filter @hurc/storefront test:e2e:visual
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-visual-report
+          path: |
+            apps/storefront/playwright-report/
+            apps/storefront/tests/e2e/.output/
+          retention-days: 14

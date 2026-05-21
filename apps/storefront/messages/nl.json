@@ -1,0 +1,548 @@
+{
+  "common": {
+    "brand": "HURC",
+    "tagline": "Hustle Unleashed, Resilience Crafted",
+    "skipToContent": "Naar inhoud",
+    "loading": "Laden…",
+    "home": "Home",
+    "account": "Account",
+    "language": "Taal",
+    "openMenu": "Menu openen",
+    "navMenu": "Hoofdnavigatie",
+    "cart": "{count, plural, =0 {Winkelmand} =1 {Winkelmand, 1 product} other {Winkelmand, # producten}}",
+    "cartTitle": "Jouw winkelmand"
+  },
+  "nav": {
+    "run": "Hardlopen",
+    "train": "Training",
+    "yoga": "Yoga",
+    "studio": "Studio",
+    "collections": "Collecties",
+    "editorial": "Editorial",
+    "sale": "Sale"
+  },
+  "home": {
+    "hero": {
+      "title": "Built for movement.",
+      "subtitle": "Premium European activewear engineered for athletes who treat training as a craft.",
+      "shop": "Shop the line",
+      "story": "Our story"
+    },
+    "activities": {
+      "eyebrow": "Choose your discipline",
+      "title": "Every move, every day.",
+      "description": "Activity-specific construction — fabrics, panel maps and finishes tuned to the way you train.",
+      "cta": "Explore",
+      "run": {
+        "eyebrow": "Asphalt to trail",
+        "title": "Run"
+      },
+      "train": {
+        "eyebrow": "Iron and intervals",
+        "title": "Train"
+      },
+      "yoga": {
+        "eyebrow": "Slow flow, deep breath",
+        "title": "Yoga"
+      },
+      "studio": {
+        "eyebrow": "Court, cycle, climb",
+        "title": "Studio"
+      }
+    },
+    "featured": {
+      "eyebrow": "This drop",
+      "title": "Featured collections",
+      "viewAll": "Bekijk alle"
+    },
+    "statement": {
+      "eyebrow": "Made in Europe",
+      "headline": "Engineered for movement, designed without compromise.",
+      "body": "Our patternmakers, fabric mills and finishing partners sit within a 1,000-kilometre radius. Shorter logistics, deeper relationships, better gear."
+    },
+    "newsletter": {
+      "eyebrow": "The Inside Lane",
+      "title": "Schrijf je in. Blijf scherp.",
+      "description": "Eerste toegang tot drops, trainingsdagboeken en atletenportretten. Twee mails per maand, niet meer.",
+      "emailLabel": "E-mail",
+      "emailPlaceholder": "jij@example.com",
+      "emailError": "Vul een geldig e-mailadres in.",
+      "submit": "Aanmelden",
+      "submitting": "Bezig…",
+      "consent": "We gebruiken je e-mail alleen voor deze nieuwsbrief. Altijd uit te schrijven; we delen of verkopen niets.",
+      "success": {
+        "created": "Check je inbox om te bevestigen.",
+        "pending": "Bijna klaar — bevestig in je inbox.",
+        "already_subscribed": "Je staat al op de lijst."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Hustle Unleashed, Resilience Crafted",
+    "localeBadge": "Verzending in {currency} · {region}",
+    "columns": {
+      "shop": {
+        "title": "Shop",
+        "items": {
+          "run": "Hardlopen",
+          "train": "Training",
+          "yoga": "Yoga",
+          "studio": "Studio",
+          "sale": "Sale"
+        }
+      },
+      "help": {
+        "title": "Hulp",
+        "items": {
+          "support": "Klantenservice",
+          "shipping": "Verzending",
+          "returns": "Retouren",
+          "sizeGuide": "Maattabel"
+        }
+      },
+      "brand": {
+        "title": "Merk",
+        "items": {
+          "story": "Ons verhaal",
+          "sustainability": "Duurzaamheid",
+          "editorial": "Editorial",
+          "careers": "Vacatures"
+        }
+      },
+      "legal": {
+        "title": "Juridisch",
+        "items": {
+          "imprint": "Colofon",
+          "terms": "Voorwaarden",
+          "privacy": "Privacy",
+          "cookies": "Cookies",
+          "withdrawal": "Herroeping"
+        }
+      }
+    }
+  },
+  "commerce": {
+    "plp": {
+      "home": "Home",
+      "total": "{count, plural, =0 {Geen producten} =1 {1 product} other {# producten}}",
+      "empty": "Nog geen producten gevonden."
+    },
+    "sort": {
+      "label": "Sorteren",
+      "option": {
+        "name-asc": "Naam A–Z",
+        "name-desc": "Naam Z–A",
+        "price-asc": "Prijs oplopend",
+        "price-desc": "Prijs aflopend"
+      }
+    },
+    "pagination": {
+      "previous": "Vorige",
+      "next": "Volgende"
+    },
+    "pdp": {
+      "home": "Home",
+      "selectAllOptions": "Selecteer alle opties om verder te gaan.",
+      "addToBag": "In winkelmand",
+      "adding": "Toevoegen…",
+      "added": "Toegevoegd aan winkelmand."
+    },
+    "stock": {
+      "inStock": "Op voorraad",
+      "lowStock": "Bijna uitverkocht",
+      "outOfStock": "Uitverkocht"
+    },
+    "gpsr": {
+      "title": "Productgegevens",
+      "material": "Materiaalsamenstelling",
+      "care": "Onderhoud",
+      "sustainability": "Duurzaamheid",
+      "manufacturer": "Fabrikant",
+      "warnings": "Waarschuwingen",
+      "traceability": "Traceringscode",
+      "responsiblePerson": "EU-verantwoordelijke",
+      "emptyState": "Compliance-informatie wordt voorbereid en verschijnt hier zodra deze beschikbaar is."
+    },
+    "cart": {
+      "empty": "Je winkelmand is leeg.",
+      "continueShopping": "Verder winkelen",
+      "checkout": "Afrekenen",
+      "decrement": "Aantal verlagen",
+      "increment": "Aantal verhogen",
+      "remove": "Verwijderen",
+      "coupon": {
+        "label": "Kortingscode",
+        "placeholder": "VOER CODE IN",
+        "apply": "Toepassen",
+        "applying": "Toepassen…",
+        "applied": "Code toegepast.",
+        "toggle": "Heb je een code?",
+        "remove": "Code {code} verwijderen"
+      },
+      "shipping": {
+        "reached": "Gratis verzending bereikt.",
+        "remaining": "Nog {amount} tot gratis verzending."
+      },
+      "totals": {
+        "subtotal": "Subtotaal",
+        "shipping": "Verzending",
+        "shippingPending": "Bij afrekenen berekend",
+        "total": "Totaal"
+      }
+    }
+  },
+  "account": {
+    "logout": "Uitloggen",
+    "loggingOut": "Uitloggen…",
+    "logoutSuccess": "Uitgelogd.",
+    "sidebar": {
+      "title": "Account",
+      "dashboard": "Overzicht",
+      "profile": "Profiel",
+      "addresses": "Adressen",
+      "orders": "Bestellingen",
+      "data": "Gegevens & privacy"
+    },
+    "dashboard": {
+      "eyebrow": "Account",
+      "greeting": "Welkom terug, {firstName}.",
+      "description": "Beheer hier je profiel, adressen, bestellingen en privacy-instellingen."
+    },
+    "login": {
+      "title": "Inloggen",
+      "description": "Welkom terug. Vul je e-mail en wachtwoord in om door te gaan.",
+      "email": "E-mail",
+      "emailError": "Vul een geldig e-mailadres in.",
+      "password": "Wachtwoord",
+      "passwordError": "Wachtwoord is verplicht.",
+      "submit": "Inloggen",
+      "submitting": "Inloggen…",
+      "success": "Ingelogd.",
+      "forgotPasswordPrefix": "Wachtwoord vergeten?",
+      "forgotPassword": "Reset",
+      "noAccountPrefix": "Nog geen account?",
+      "register": "Aanmaken"
+    },
+    "register": {
+      "title": "Account aanmaken",
+      "description": "We sturen een bevestigingslink om je e-mail te verifiëren.",
+      "email": "E-mail",
+      "emailError": "Vul een geldig e-mailadres in.",
+      "firstName": "Voornaam",
+      "lastName": "Achternaam",
+      "password": "Wachtwoord",
+      "passwordHelper": "Minstens 8 tekens.",
+      "passwordError": "Minstens 8 tekens vereist.",
+      "phone": "Telefoon (optioneel)",
+      "phoneHelper": "Alleen voor bezorgupdates.",
+      "phoneError": "Vul een geldig telefoonnummer in.",
+      "required": "Verplicht.",
+      "submit": "Account aanmaken",
+      "submitting": "Aanmaken…",
+      "success": "Check je inbox om je e-mail te bevestigen.",
+      "haveAccountPrefix": "Heb je al een account?",
+      "login": "Inloggen"
+    },
+    "verify": {
+      "title": "E-mail bevestigen",
+      "checkInbox": "Check je inbox voor de bevestigingslink.",
+      "verifying": "Verifiëren…",
+      "success": "E-mail bevestigd.",
+      "successDescription": "Je account is geverifieerd. Je kunt alle functies gebruiken.",
+      "continue": "Verder"
+    },
+    "passwordReset": {
+      "request": {
+        "title": "Wachtwoord resetten",
+        "description": "Vul je e-mail in en we sturen een resetlink.",
+        "email": "E-mail",
+        "emailError": "Vul een geldig e-mailadres in.",
+        "submit": "Resetlink sturen",
+        "submitting": "Versturen…",
+        "success": "Als dit e-mailadres bekend is, is de link onderweg."
+      },
+      "complete": {
+        "title": "Nieuw wachtwoord instellen",
+        "description": "Kies een sterk wachtwoord dat je niet ergens anders gebruikt.",
+        "password": "Nieuw wachtwoord",
+        "passwordHelper": "Minstens 8 tekens.",
+        "passwordError": "Minstens 8 tekens vereist.",
+        "submit": "Opslaan",
+        "submitting": "Opslaan…",
+        "success": "Wachtwoord bijgewerkt."
+      }
+    },
+    "profile": {
+      "title": "Profiel",
+      "description": "Werk de gegevens bij die we voor verzending en updates gebruiken.",
+      "email": "E-mail",
+      "emailReadOnly": "Neem contact op met de support om je e-mail te wijzigen.",
+      "firstName": "Voornaam",
+      "lastName": "Achternaam",
+      "phone": "Telefoon",
+      "required": "Verplicht.",
+      "submit": "Wijzigingen opslaan",
+      "submitting": "Opslaan…",
+      "success": "Profiel bijgewerkt."
+    },
+    "address": {
+      "title": "Adressen",
+      "description": "Opgeslagen adressen verschijnen bij het afrekenen voor snelle selectie.",
+      "addNew": "Nieuw adres toevoegen",
+      "empty": "Je hebt nog geen adressen opgeslagen.",
+      "defaultShipping": "Standaard verzending",
+      "defaultBilling": "Standaard facturering",
+      "delete": "Verwijderen",
+      "deleted": "Adres verwijderd.",
+      "created": "Adres opgeslagen.",
+      "updated": "Adres bijgewerkt.",
+      "fullName": "Volledige naam",
+      "company": "Bedrijf (optioneel)",
+      "streetLine1": "Straat",
+      "streetLine2": "Appartement, etc.",
+      "city": "Plaats",
+      "province": "Provincie (optioneel)",
+      "postalCode": "Postcode",
+      "country": "Land",
+      "phone": "Telefoon (optioneel)",
+      "required": "Verplicht.",
+      "submitting": "Opslaan…",
+      "addAddress": "Adres opslaan",
+      "saveChanges": "Wijzigingen opslaan"
+    },
+    "orders": {
+      "title": "Bestellingen",
+      "code": "Bestelling {code}",
+      "state": "Status: {state}",
+      "items": "{count, plural, =0 {Geen producten} =1 {1 product} other {# producten}}",
+      "pending": "In afwachting",
+      "empty": "Je hebt nog geen bestellingen geplaatst.",
+      "detail": {
+        "eyebrow": "Bestelling {code}",
+        "state": "Status: {state}",
+        "pending": "Bestelling in afwachting"
+      }
+    },
+    "gdpr": {
+      "title": "Gegevens & privacy",
+      "description": "Exporteer of verwijder de persoonlijke gegevens die we van je hebben.",
+      "export": {
+        "title": "Gegevens exporteren",
+        "description": "Download een ZIP-archief met je profiel, bestellingen, adressen en toestemmingsgeschiedenis.",
+        "cta": "ZIP downloaden",
+        "confirmTitle": "Gegevens exporteren?",
+        "confirmBody": "We stellen een ZIP-archief samen van alle persoonsgegevens die we van u bewaren. De download start direct en kan tot een minuut duren.",
+        "confirmCta": "Export starten",
+        "preparing": "Voorbereiden…",
+        "rateLimited": "Wacht even voordat u opnieuw exporteert.",
+        "failed": "Export is niet gelukt. Probeer het opnieuw of neem contact op met de klantenservice."
+      },
+      "delete": {
+        "title": "Account verwijderen",
+        "description": "Anonimiseer je gegevens permanent. Eerdere bestellingen worden bewaard volgens de boekhoudwetgeving maar ontdaan van persoonlijke identifiers.",
+        "cta": "Account verwijderen",
+        "confirmTitle": "Account verwijderen?",
+        "confirmBody": "Dit kan niet ongedaan worden gemaakt. Profiel en adressen worden verwijderd; eerdere bestellingen worden geanonimiseerd maar bewaard voor compliance.",
+        "cancel": "Annuleren",
+        "confirm": "Ja, verwijderen",
+        "deleting": "Verwijderen…",
+        "success": "Je account is verwijderd.",
+        "challengeLabel": "Typ {phrase} om te bevestigen",
+        "challengePhrase": "VERWIJDER MIJN ACCOUNT",
+        "challengeMismatch": "Onjuiste invoer — probeer het opnieuw.",
+        "rateLimited": "Wacht even voordat u het opnieuw probeert.",
+        "failed": "Account kon niet worden verwijderd. Neem contact op met de klantenservice."
+      }
+    }
+  },
+  "checkout": {
+    "steps": {
+      "customer": "Klant",
+      "shipping": "Verzending",
+      "payment": "Betaling",
+      "review": "Overzicht"
+    },
+    "customer": {
+      "title": "Jouw gegevens",
+      "description": "We gebruiken dit voor je orderbevestiging en updates.",
+      "email": "E-mail",
+      "emailError": "Vul een geldig e-mailadres in.",
+      "firstName": "Voornaam",
+      "lastName": "Achternaam",
+      "phone": "Telefoon (optioneel)",
+      "required": "Verplicht.",
+      "submit": "Verder naar verzending",
+      "submitting": "Opslaan…"
+    },
+    "shipping": {
+      "title": "Verzending",
+      "description": "Waarheen sturen we je bestelling?",
+      "addressTitle": "Verzendadres",
+      "methodTitle": "Verzendmethode",
+      "methodsEmpty": "Geen verzendmethoden beschikbaar voor dit adres.",
+      "selectMethod": "Selecteer een verzendmethode.",
+      "fullName": "Volledige naam",
+      "company": "Bedrijf (optioneel)",
+      "streetLine1": "Straat",
+      "streetLine2": "Appartement, etc.",
+      "city": "Plaats",
+      "postalCode": "Postcode",
+      "province": "Provincie (optioneel)",
+      "country": "Land",
+      "phone": "Telefoon (optioneel)",
+      "required": "Verplicht.",
+      "submit": "Verder naar betaling",
+      "submitting": "Opslaan…"
+    },
+    "payment": {
+      "title": "Betaling",
+      "description": "Kies een betaalmethode. Je rondt de betaling af op de beveiligde pagina van de aanbieder.",
+      "methodsTitle": "Betaalmethode",
+      "methodsEmpty": "Op dit moment geen betaalmethoden beschikbaar.",
+      "selectMethod": "Selecteer een betaalmethode.",
+      "hostedRedirectNote": "Je wordt doorgeleid naar de betaalprovider om je aankoop veilig af te ronden.",
+      "submit": "Verder naar betaling",
+      "submitting": "Doorleiden…",
+      "consentRequired": "Bevestig dat u de Algemene voorwaarden en het Privacybeleid heeft gelezen."
+    },
+    "confirmation": {
+      "title": "Bestelling bevestigd.",
+      "description": "Bedankt. We hebben je een bevestiging gestuurd voor bestelling {code}.",
+      "viewOrders": "Alle bestellingen bekijken"
+    },
+    "consent": {
+      "label": "Ik heb de <terms>Algemene voorwaarden</terms> en het <privacy>Privacybeleid</privacy> gelezen en ga met beide akkoord."
+    },
+    "withdrawal": {
+      "title": "Herroepingsrecht van 14 dagen",
+      "body": "U kunt deze bestelling binnen 14 dagen na ontvangst zonder opgaaf van reden annuleren. Lees vóór indiening de <link>volledige herroepingsvoorwaarden</link>."
+    }
+  },
+  "errors": {
+    "title": "Er is iets misgegaan",
+    "description": "Er is een onverwachte fout opgetreden. Probeer het opnieuw.",
+    "retry": "Opnieuw proberen",
+    "goHome": "Terug naar de homepage",
+    "generic": "Er is iets misgegaan. Probeer het opnieuw.",
+    "newsletter": {
+      "INVALID_EMAIL": "Vul een geldig e-mailadres in.",
+      "BOT_DETECTED": "Verificatie mislukt. Probeer het opnieuw.",
+      "UPSTREAM_ERROR": "Aanmelden lukt nu niet. Probeer het zo opnieuw."
+    },
+    "vendure": {
+      "UNKNOWN_ERROR": "Er is iets misgegaan. Probeer het opnieuw.",
+      "NATIVE_AUTH_STRATEGY_ERROR": "Aanmelden is nu niet beschikbaar.",
+      "INVALID_CREDENTIALS_ERROR": "E-mail of wachtwoord klopt niet.",
+      "ORDER_STATE_TRANSITION_ERROR": "Deze bestelling kan nu niet worden bijgewerkt.",
+      "EMAIL_ADDRESS_CONFLICT_ERROR": "Dit e-mailadres is al geregistreerd.",
+      "GUEST_CHECKOUT_ERROR": "Bestellen als gast is niet beschikbaar.",
+      "ORDER_LIMIT_ERROR": "Deze bestelling heeft de limiet bereikt.",
+      "NEGATIVE_QUANTITY_ERROR": "Aantal kan niet negatief zijn.",
+      "INSUFFICIENT_STOCK_ERROR": "Onvoldoende voorraad voor het gewenste aantal.",
+      "COUPON_CODE_INVALID_ERROR": "Deze kortingscode is ongeldig.",
+      "COUPON_CODE_EXPIRED_ERROR": "Deze kortingscode is verlopen.",
+      "COUPON_CODE_LIMIT_ERROR": "Deze kortingscode is te vaak gebruikt.",
+      "ORDER_MODIFICATION_ERROR": "Deze bestelling kan niet meer worden gewijzigd.",
+      "INELIGIBLE_SHIPPING_METHOD_ERROR": "Deze verzendmethode is niet beschikbaar.",
+      "NO_ACTIVE_ORDER_ERROR": "Geen actieve bestelling om bij te werken.",
+      "ORDER_INTERCEPTOR_ERROR": "We konden de wijziging niet verwerken.",
+      "ORDER_PAYMENT_STATE_ERROR": "De betaalstatus blokkeert deze wijziging.",
+      "INELIGIBLE_PAYMENT_METHOD_ERROR": "Deze betaalmethode is niet beschikbaar.",
+      "PAYMENT_FAILED_ERROR": "Betaling mislukt. Probeer opnieuw of een andere methode.",
+      "PAYMENT_DECLINED_ERROR": "Betaling geweigerd. Probeer een andere kaart of methode.",
+      "ALREADY_LOGGED_IN_ERROR": "Je bent al ingelogd.",
+      "MISSING_PASSWORD_ERROR": "Wachtwoord verplicht.",
+      "PASSWORD_VALIDATION_ERROR": "Dit wachtwoord voldoet niet aan de eisen.",
+      "PASSWORD_ALREADY_SET_ERROR": "Voor dit account is al een wachtwoord ingesteld.",
+      "VERIFICATION_TOKEN_INVALID_ERROR": "Deze verificatielink is ongeldig.",
+      "VERIFICATION_TOKEN_EXPIRED_ERROR": "Deze verificatielink is verlopen.",
+      "IDENTIFIER_CHANGE_TOKEN_INVALID_ERROR": "Deze e-mailwijziging-link is ongeldig.",
+      "IDENTIFIER_CHANGE_TOKEN_EXPIRED_ERROR": "Deze e-mailwijziging-link is verlopen.",
+      "PASSWORD_RESET_TOKEN_INVALID_ERROR": "Deze wachtwoord-reset-link is ongeldig.",
+      "PASSWORD_RESET_TOKEN_EXPIRED_ERROR": "Deze wachtwoord-reset-link is verlopen.",
+      "NOT_VERIFIED_ERROR": "Bevestig je e-mailadres voordat je inlogt.",
+      "MOLLIE_PAYMENT_INTENT_ERROR": "We konden de betaling niet starten. Probeer het opnieuw."
+    }
+  },
+  "notFound": {
+    "title": "Pagina niet gevonden",
+    "description": "De pagina die je zoekt bestaat niet of is verplaatst.",
+    "goHome": "Terug naar de homepage"
+  },
+  "journal": {
+    "indexTitle": "Journal",
+    "indexEyebrow": "Verhalen van de werkvloer",
+    "indexDescription": "Trainingsdagboeken, atletenportretten en aantekeningen uit het atelier.",
+    "indexEmpty": "Nog geen berichten — kijk binnenkort terug.",
+    "readMore": "Lezen",
+    "backToIndex": "Terug naar het journal",
+    "previousPage": "Vorige",
+    "nextPage": "Volgende",
+    "pageIndicator": "Pagina {page} van {totalPages}",
+    "paginationLabel": "Paginering"
+  },
+  "story": {
+    "title": "Ons verhaal",
+    "eyebrow": "Over HURC"
+  },
+  "studio": {
+    "disabled": "De editorial studio is niet geconfigureerd in deze omgeving."
+  },
+  "consent": {
+    "manageButton": "Cookies beheren",
+    "notice": {
+      "description": "We gebruiken cookies en vergelijkbare technologieën voor essentiële functies en — met uw toestemming — voor analyse en marketing.",
+      "learnMore": "Voorkeuren beheren"
+    },
+    "modal": {
+      "title": "Privacyvoorkeuren",
+      "description": "Kies welke optionele diensten actief mogen zijn tijdens uw bezoek. U kunt dit op elk moment wijzigen via de footer."
+    },
+    "services": {
+      "functional": {
+        "title": "Functioneel",
+        "description": "Winkelmandje, aanmelden, taal en toestemmingsstatus. Vereist voor de werking van de site — actief ongeacht uw keuze."
+      },
+      "plausible": {
+        "title": "Plausible Analytics",
+        "description": "Privacyvriendelijke, cookieloze bezoekerstelling in de EU. Geen persoonsgegevens verlaten de EU."
+      },
+      "posthog": {
+        "title": "Productanalyse (PostHog)",
+        "description": "Helpt ons te begrijpen welke functies worden gebruikt en waar de site tekortschiet. Gegevens blijven in de EU."
+      },
+      "sentry": {
+        "title": "Foutrapportage (Sentry)",
+        "description": "Vangt runtime-fouten op zodat we ze kunnen oplossen. Gegevens blijven in de EU; geen bestel- of betaalgegevens."
+      },
+      "klaviyo": {
+        "title": "Marketing (Klaviyo)",
+        "description": "Marketing-e-mails en persoonlijke aanbevelingen. Verwerking in de Verenigde Staten op basis van standaardcontractbepalingen."
+      }
+    },
+    "actions": {
+      "acceptAll": "Alles accepteren",
+      "acceptSelected": "Selectie accepteren",
+      "decline": "Alles weigeren",
+      "save": "Voorkeuren opslaan",
+      "close": "Sluiten"
+    },
+    "privacyPolicy": {
+      "name": "privacybeleid",
+      "text": "Zie voor meer informatie ons {privacyPolicy}."
+    }
+  },
+  "legal": {
+    "shell": {
+      "eyebrow": "Juridisch",
+      "translationPending": "Deze pagina wordt voorlopig in het Engels weergegeven — een professionele vertaling volgt."
+    },
+    "titles": {
+      "imprint": "Colofon",
+      "terms": "Algemene voorwaarden",
+      "privacy": "Privacybeleid",
+      "cookies": "Cookiebeleid",
+      "withdrawal": "Herroepingsrecht"
+    }
+  }
+}

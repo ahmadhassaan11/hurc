@@ -5,6 +5,9 @@
 - **Decision owner:** Lead full-stack engineer
 - **Supersedes:** Section "Phase 2 — Vendure backend" of the build spec, which
   this document refines into executable sub-tasks.
+- **Amended by:** [ADR-0003 — Phase 2 amendment](./0003-phase-2-amendment.md)
+  (2026-05-02). Records the 10 implementation deviations surfaced while
+  executing this plan. Read 0002 + 0003 together.
 
 ## Why this plan exists
 

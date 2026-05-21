@@ -1,0 +1,12 @@
+fragment AdminAdministratorFields on Administrator {
+  id
+  firstName
+  lastName
+  emailAddress
+}
+
+query ActiveAdministrator {
+  activeAdministrator {
+    ...AdminAdministratorFields
+  }
+}

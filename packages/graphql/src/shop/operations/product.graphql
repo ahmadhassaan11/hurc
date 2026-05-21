@@ -1,0 +1,178 @@
+fragment ProductCustomFieldsFragment on ProductCustomFields {
+  activity
+  materialComposition
+  careInstructions
+  sustainabilityNotes
+  manufacturerInfo
+  warnings
+  traceabilityCode
+  responsiblePerson {
+    id
+    name
+    email
+    address
+  }
+}
+
+fragment AssetFields on Asset {
+  id
+  name
+  source
+  preview
+  width
+  height
+  mimeType
+  type
+}
+
+fragment ProductCardFields on Product {
+  id
+  name
+  slug
+  description
+  featuredAsset {
+    ...AssetFields
+  }
+  variantList(options: { take: 1 }) {
+    items {
+      id
+      sku
+      price
+      priceWithTax
+      currencyCode
+    }
+  }
+  customFields {
+    activity
+  }
+}
+
+fragment ProductDetailVariantFields on ProductVariant {
+  id
+  sku
+  name
+  price
+  priceWithTax
+  currencyCode
+  stockLevel
+  featuredAsset {
+    ...AssetFields
+  }
+  assets {
+    ...AssetFields
+  }
+  options {
+    id
+    code
+    name
+    groupId
+  }
+}
+
+fragment ProductDetailFields on Product {
+  id
+  name
+  slug
+  description
+  featuredAsset {
+    ...AssetFields
+  }
+  assets {
+    ...AssetFields
+  }
+  collections {
+    id
+    name
+    slug
+    breadcrumbs {
+      id
+      name
+      slug
+    }
+  }
+  optionGroups {
+    id
+    code
+    name
+    options {
+      id
+      code
+      name
+    }
+  }
+  variants {
+    ...ProductDetailVariantFields
+  }
+  customFields {
+    ...ProductCustomFieldsFragment
+  }
+}
+
+query ProductList($options: ProductListOptions) {
+  products(options: $options) {
+    items {
+      ...ProductCardFields
+    }
+    totalItems
+  }
+}
+
+query ProductBySlug($slug: String!) {
+  product(slug: $slug) {
+    ...ProductDetailFields
+  }
+}
+
+fragment SearchResultFields on SearchResult {
+  productId
+  productName
+  slug
+  description
+  productAsset {
+    id
+    preview
+    focalPoint {
+      x
+      y
+    }
+  }
+  priceWithTax {
+    __typename
+    ... on SinglePrice {
+      value
+    }
+    ... on PriceRange {
+      min
+      max
+    }
+  }
+  currencyCode
+  collectionIds
+  facetValueIds
+}
+
+fragment SearchFacetValueResultFields on FacetValueResult {
+  count
+  facetValue {
+    id
+    code
+    name
+    facet {
+      id
+      code
+      name
+    }
+  }
+}
+
+query SearchProducts($input: SearchInput!) {
+  search(input: $input) {
+    totalItems
+    items {
+      ...SearchResultFields
+    }
+    facetValues {
+      ...SearchFacetValueResultFields
+    }
+  }
+}

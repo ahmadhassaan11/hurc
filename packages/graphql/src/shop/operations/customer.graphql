@@ -1,0 +1,169 @@
+fragment ErrorFields on ErrorResult {
+  errorCode
+  message
+}
+
+fragment CustomerCustomFieldsFragment on CustomerCustomFields {
+  marketingOptIn
+  marketingOptInAt
+  preferredActivity
+}
+
+fragment AddressFields on Address {
+  id
+  fullName
+  company
+  streetLine1
+  streetLine2
+  city
+  province
+  postalCode
+  country {
+    id
+    code
+    name
+  }
+  phoneNumber
+  defaultShippingAddress
+  defaultBillingAddress
+}
+
+fragment CustomerFields on Customer {
+  id
+  title
+  firstName
+  lastName
+  emailAddress
+  phoneNumber
+  addresses {
+    ...AddressFields
+  }
+  customFields {
+    ...CustomerCustomFieldsFragment
+  }
+}
+
+fragment CurrentUserFields on CurrentUser {
+  id
+  identifier
+  channels {
+    id
+    token
+    code
+    permissions
+  }
+}
+
+query ActiveCustomer {
+  activeCustomer {
+    ...CustomerFields
+  }
+}
+
+mutation Login($username: String!, $password: String!, $rememberMe: Boolean) {
+  login(username: $username, password: $password, rememberMe: $rememberMe) {
+    __typename
+    ... on CurrentUser {
+      ...CurrentUserFields
+    }
+    ... on ErrorResult {
+      ...ErrorFields
+    }
+  }
+}
+
+mutation Logout {
+  logout {
+    success
+  }
+}
+
+mutation RegisterCustomerAccount($input: RegisterCustomerInput!) {
+  registerCustomerAccount(input: $input) {
+    __typename
+    ... on Success {
+      success
+    }
+    ... on ErrorResult {
+      ...ErrorFields
+    }
+  }
+}
+
+mutation VerifyCustomerAccount($token: String!, $password: String) {
+  verifyCustomerAccount(token: $token, password: $password) {
+    __typename
+    ... on CurrentUser {
+      ...CurrentUserFields
+    }
+    ... on ErrorResult {
+      ...ErrorFields
+    }
+  }
+}
+
+mutation RequestPasswordReset($emailAddress: String!) {
+  requestPasswordReset(emailAddress: $emailAddress) {
+    __typename
+    ... on Success {
+      success
+    }
+    ... on ErrorResult {
+      ...ErrorFields
+    }
+  }
+}
+
+mutation ResetPassword($token: String!, $password: String!) {
+  resetPassword(token: $token, password: $password) {
+    __typename
+    ... on CurrentUser {
+      ...CurrentUserFields
+    }
+    ... on ErrorResult {
+      ...ErrorFields
+    }
+  }
+}
+
+mutation UpdateCustomer($input: UpdateCustomerInput!) {
+  updateCustomer(input: $input) {
+    ...CustomerFields
+  }
+}
+
+mutation UpdateCustomerPassword($currentPassword: String!, $newPassword: String!) {
+  updateCustomerPassword(currentPassword: $currentPassword, newPassword: $newPassword) {
+    __typename
+    ... on Success {
+      success
+    }
+    ... on ErrorResult {
+      ...ErrorFields
+    }
+  }
+}
+
+mutation RequestUpdateCustomerEmailAddress($password: String!, $newEmailAddress: String!) {
+  requestUpdateCustomerEmailAddress(password: $password, newEmailAddress: $newEmailAddress) {
+    __typename
+    ... on Success {
+      success
+    }
+    ... on ErrorResult {
+      ...ErrorFields
+    }
+  }
+}
+
+mutation UpdateCustomerEmailAddress($token: String!) {
+  updateCustomerEmailAddress(token: $token) {
+    __typename
+    ... on Success {
+      success
+    }
+    ... on ErrorResult {
+      ...ErrorFields
+    }
+  }
+}

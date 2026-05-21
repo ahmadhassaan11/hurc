@@ -1,0 +1,548 @@
+{
+  "common": {
+    "brand": "HURC",
+    "tagline": "Hustle Unleashed, Resilience Crafted",
+    "skipToContent": "Saltar al contenido",
+    "loading": "Cargando…",
+    "home": "Inicio",
+    "account": "Cuenta",
+    "language": "Idioma",
+    "openMenu": "Abrir menú",
+    "navMenu": "Navegación principal",
+    "cart": "{count, plural, =0 {Carrito} =1 {Carrito, 1 artículo} other {Carrito, # artículos}}",
+    "cartTitle": "Tu carrito"
+  },
+  "nav": {
+    "run": "Running",
+    "train": "Training",
+    "yoga": "Yoga",
+    "studio": "Studio",
+    "collections": "Colecciones",
+    "editorial": "Editorial",
+    "sale": "Rebajas"
+  },
+  "home": {
+    "hero": {
+      "title": "Built for movement.",
+      "subtitle": "Premium European activewear engineered for athletes who treat training as a craft.",
+      "shop": "Shop the line",
+      "story": "Our story"
+    },
+    "activities": {
+      "eyebrow": "Choose your discipline",
+      "title": "Every move, every day.",
+      "description": "Activity-specific construction — fabrics, panel maps and finishes tuned to the way you train.",
+      "cta": "Explore",
+      "run": {
+        "eyebrow": "Asphalt to trail",
+        "title": "Run"
+      },
+      "train": {
+        "eyebrow": "Iron and intervals",
+        "title": "Train"
+      },
+      "yoga": {
+        "eyebrow": "Slow flow, deep breath",
+        "title": "Yoga"
+      },
+      "studio": {
+        "eyebrow": "Court, cycle, climb",
+        "title": "Studio"
+      }
+    },
+    "featured": {
+      "eyebrow": "This drop",
+      "title": "Featured collections",
+      "viewAll": "Ver todo"
+    },
+    "statement": {
+      "eyebrow": "Made in Europe",
+      "headline": "Engineered for movement, designed without compromise.",
+      "body": "Our patternmakers, fabric mills and finishing partners sit within a 1,000-kilometre radius. Shorter logistics, deeper relationships, better gear."
+    },
+    "newsletter": {
+      "eyebrow": "The Inside Lane",
+      "title": "Apúntate. Mantente afinada/o.",
+      "description": "Acceso anticipado a drops, diarios de entrenamiento y retratos de atletas. Dos correos al mes, sin más.",
+      "emailLabel": "Correo",
+      "emailPlaceholder": "tu@example.com",
+      "emailError": "Introduce un correo válido.",
+      "submit": "Suscribirse",
+      "submitting": "Enviando…",
+      "consent": "Solo usamos tu correo para esta newsletter. Puedes darte de baja en cualquier momento; nunca compartimos ni vendemos.",
+      "success": {
+        "created": "Revisa tu bandeja para confirmar.",
+        "pending": "Casi listo — confirma en tu bandeja de entrada.",
+        "already_subscribed": "Ya estás en la lista."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Hustle Unleashed, Resilience Crafted",
+    "localeBadge": "Envíos en {currency} · {region}",
+    "columns": {
+      "shop": {
+        "title": "Tienda",
+        "items": {
+          "run": "Running",
+          "train": "Training",
+          "yoga": "Yoga",
+          "studio": "Studio",
+          "sale": "Rebajas"
+        }
+      },
+      "help": {
+        "title": "Ayuda",
+        "items": {
+          "support": "Atención al cliente",
+          "shipping": "Envíos",
+          "returns": "Devoluciones",
+          "sizeGuide": "Guía de tallas"
+        }
+      },
+      "brand": {
+        "title": "Marca",
+        "items": {
+          "story": "Nuestra historia",
+          "sustainability": "Sostenibilidad",
+          "editorial": "Editorial",
+          "careers": "Empleo"
+        }
+      },
+      "legal": {
+        "title": "Legal",
+        "items": {
+          "imprint": "Aviso legal",
+          "terms": "Condiciones",
+          "privacy": "Privacidad",
+          "cookies": "Cookies",
+          "withdrawal": "Desistimiento"
+        }
+      }
+    }
+  },
+  "commerce": {
+    "plp": {
+      "home": "Inicio",
+      "total": "{count, plural, =0 {Sin productos} =1 {1 producto} other {# productos}}",
+      "empty": "Aún no hay productos que coincidan."
+    },
+    "sort": {
+      "label": "Ordenar",
+      "option": {
+        "name-asc": "Nombre A–Z",
+        "name-desc": "Nombre Z–A",
+        "price-asc": "Precio ascendente",
+        "price-desc": "Precio descendente"
+      }
+    },
+    "pagination": {
+      "previous": "Anterior",
+      "next": "Siguiente"
+    },
+    "pdp": {
+      "home": "Inicio",
+      "selectAllOptions": "Selecciona todas las opciones para continuar.",
+      "addToBag": "Añadir al carrito",
+      "adding": "Añadiendo…",
+      "added": "Añadido al carrito."
+    },
+    "stock": {
+      "inStock": "En stock",
+      "lowStock": "Pocas unidades",
+      "outOfStock": "Agotado"
+    },
+    "gpsr": {
+      "title": "Detalles del producto",
+      "material": "Composición",
+      "care": "Cuidados",
+      "sustainability": "Sostenibilidad",
+      "manufacturer": "Fabricante",
+      "warnings": "Advertencias",
+      "traceability": "Código de trazabilidad",
+      "responsiblePerson": "Responsable UE",
+      "emptyState": "La información de conformidad se está preparando y aparecerá aquí cuando esté disponible."
+    },
+    "cart": {
+      "empty": "Tu carrito está vacío.",
+      "continueShopping": "Seguir comprando",
+      "checkout": "Pagar",
+      "decrement": "Reducir cantidad",
+      "increment": "Aumentar cantidad",
+      "remove": "Quitar",
+      "coupon": {
+        "label": "Código promocional",
+        "placeholder": "INTRODUCE EL CÓDIGO",
+        "apply": "Aplicar",
+        "applying": "Aplicando…",
+        "applied": "Código aplicado.",
+        "toggle": "¿Tienes un código?",
+        "remove": "Quitar el código {code}"
+      },
+      "shipping": {
+        "reached": "Envío gratis desbloqueado.",
+        "remaining": "Te faltan {amount} para envío gratis."
+      },
+      "totals": {
+        "subtotal": "Subtotal",
+        "shipping": "Envío",
+        "shippingPending": "Calculado al pagar",
+        "total": "Total"
+      }
+    }
+  },
+  "account": {
+    "logout": "Cerrar sesión",
+    "loggingOut": "Cerrando sesión…",
+    "logoutSuccess": "Sesión cerrada.",
+    "sidebar": {
+      "title": "Cuenta",
+      "dashboard": "Resumen",
+      "profile": "Perfil",
+      "addresses": "Direcciones",
+      "orders": "Pedidos",
+      "data": "Datos y privacidad"
+    },
+    "dashboard": {
+      "eyebrow": "Cuenta",
+      "greeting": "Bienvenida/o de nuevo, {firstName}.",
+      "description": "Gestiona aquí tu perfil, direcciones, pedidos y preferencias de privacidad."
+    },
+    "login": {
+      "title": "Iniciar sesión",
+      "description": "Bienvenida/o de nuevo. Introduce tu correo y contraseña para continuar.",
+      "email": "Correo",
+      "emailError": "Introduce un correo válido.",
+      "password": "Contraseña",
+      "passwordError": "La contraseña es obligatoria.",
+      "submit": "Iniciar sesión",
+      "submitting": "Iniciando sesión…",
+      "success": "Sesión iniciada.",
+      "forgotPasswordPrefix": "¿Olvidaste tu contraseña?",
+      "forgotPassword": "Restablecer",
+      "noAccountPrefix": "¿Aún no tienes cuenta?",
+      "register": "Crear una"
+    },
+    "register": {
+      "title": "Crea tu cuenta",
+      "description": "Te enviaremos un enlace para verificar tu correo.",
+      "email": "Correo",
+      "emailError": "Introduce un correo válido.",
+      "firstName": "Nombre",
+      "lastName": "Apellidos",
+      "password": "Contraseña",
+      "passwordHelper": "Mínimo 8 caracteres.",
+      "passwordError": "Mínimo 8 caracteres.",
+      "phone": "Teléfono (opcional)",
+      "phoneHelper": "Solo para avisos de envío.",
+      "phoneError": "Introduce un teléfono válido.",
+      "required": "Obligatorio.",
+      "submit": "Crear cuenta",
+      "submitting": "Creando…",
+      "success": "Revisa tu bandeja para confirmar tu correo.",
+      "haveAccountPrefix": "¿Ya tienes cuenta?",
+      "login": "Iniciar sesión"
+    },
+    "verify": {
+      "title": "Verificar tu correo",
+      "checkInbox": "Revisa tu bandeja para encontrar el enlace de verificación.",
+      "verifying": "Verificando…",
+      "success": "Correo verificado.",
+      "successDescription": "Tu cuenta está verificada. Puedes usar todas las funciones.",
+      "continue": "Continuar"
+    },
+    "passwordReset": {
+      "request": {
+        "title": "Restablecer contraseña",
+        "description": "Introduce tu correo y enviaremos un enlace.",
+        "email": "Correo",
+        "emailError": "Introduce un correo válido.",
+        "submit": "Enviar enlace",
+        "submitting": "Enviando…",
+        "success": "Si ese correo está registrado, el enlace está en camino."
+      },
+      "complete": {
+        "title": "Establece una nueva contraseña",
+        "description": "Elige una contraseña fuerte que no uses en otros sitios.",
+        "password": "Nueva contraseña",
+        "passwordHelper": "Mínimo 8 caracteres.",
+        "passwordError": "Mínimo 8 caracteres.",
+        "submit": "Guardar",
+        "submitting": "Guardando…",
+        "success": "Contraseña actualizada."
+      }
+    },
+    "profile": {
+      "title": "Perfil",
+      "description": "Actualiza los datos que usamos para envíos y notificaciones.",
+      "email": "Correo",
+      "emailReadOnly": "Contacta con soporte para cambiar tu correo.",
+      "firstName": "Nombre",
+      "lastName": "Apellidos",
+      "phone": "Teléfono",
+      "required": "Obligatorio.",
+      "submit": "Guardar cambios",
+      "submitting": "Guardando…",
+      "success": "Perfil actualizado."
+    },
+    "address": {
+      "title": "Direcciones",
+      "description": "Las direcciones guardadas aparecen al pagar para selección rápida.",
+      "addNew": "Añadir nueva dirección",
+      "empty": "Aún no has guardado direcciones.",
+      "defaultShipping": "Envío predeterminado",
+      "defaultBilling": "Facturación predeterminada",
+      "delete": "Eliminar",
+      "deleted": "Dirección eliminada.",
+      "created": "Dirección guardada.",
+      "updated": "Dirección actualizada.",
+      "fullName": "Nombre completo",
+      "company": "Empresa (opcional)",
+      "streetLine1": "Calle",
+      "streetLine2": "Piso, etc.",
+      "city": "Ciudad",
+      "province": "Provincia (opcional)",
+      "postalCode": "Código postal",
+      "country": "País",
+      "phone": "Teléfono (opcional)",
+      "required": "Obligatorio.",
+      "submitting": "Guardando…",
+      "addAddress": "Guardar dirección",
+      "saveChanges": "Guardar cambios"
+    },
+    "orders": {
+      "title": "Pedidos",
+      "code": "Pedido {code}",
+      "state": "Estado: {state}",
+      "items": "{count, plural, =0 {Sin artículos} =1 {1 artículo} other {# artículos}}",
+      "pending": "Pendiente",
+      "empty": "Aún no has hecho pedidos.",
+      "detail": {
+        "eyebrow": "Pedido {code}",
+        "state": "Estado: {state}",
+        "pending": "Pedido pendiente"
+      }
+    },
+    "gdpr": {
+      "title": "Datos y privacidad",
+      "description": "Exporta o elimina los datos personales que tenemos sobre ti.",
+      "export": {
+        "title": "Exportar tus datos",
+        "description": "Descarga un ZIP con tu perfil, pedidos, direcciones e historial de consentimientos.",
+        "cta": "Descargar ZIP",
+        "confirmTitle": "¿Exportar tus datos?",
+        "confirmBody": "Compilaremos un archivo ZIP con todos los datos personales que tenemos sobre ti. La descarga comenzará de inmediato y puede tardar hasta un minuto.",
+        "confirmCta": "Iniciar exportación",
+        "preparing": "Preparando…",
+        "rateLimited": "Espera un momento antes de solicitar otra exportación.",
+        "failed": "No pudimos generar tu exportación. Inténtalo de nuevo o contacta con soporte."
+      },
+      "delete": {
+        "title": "Eliminar cuenta",
+        "description": "Anonimiza tus datos de forma permanente. Los pedidos pasados se conservan según la ley contable pero sin identificadores personales.",
+        "cta": "Eliminar cuenta",
+        "confirmTitle": "¿Eliminar cuenta?",
+        "confirmBody": "Esta acción no se puede deshacer. Perfil y direcciones se eliminarán; los pedidos pasados se anonimizan pero se conservan por compliance.",
+        "cancel": "Cancelar",
+        "confirm": "Sí, eliminar",
+        "deleting": "Eliminando…",
+        "success": "Tu cuenta ha sido eliminada.",
+        "challengeLabel": "Escribe {phrase} para confirmar",
+        "challengePhrase": "BORRAR MI CUENTA",
+        "challengeMismatch": "El texto no coincide — inténtalo de nuevo.",
+        "rateLimited": "Espera un momento antes de volver a intentarlo.",
+        "failed": "No pudimos eliminar tu cuenta. Por favor, contacta con soporte."
+      }
+    }
+  },
+  "checkout": {
+    "steps": {
+      "customer": "Cliente",
+      "shipping": "Envío",
+      "payment": "Pago",
+      "review": "Resumen"
+    },
+    "customer": {
+      "title": "Tus datos",
+      "description": "Usaremos esto para enviarte la confirmación y los avisos del pedido.",
+      "email": "Correo",
+      "emailError": "Introduce un correo válido.",
+      "firstName": "Nombre",
+      "lastName": "Apellidos",
+      "phone": "Teléfono (opcional)",
+      "required": "Obligatorio.",
+      "submit": "Continuar al envío",
+      "submitting": "Guardando…"
+    },
+    "shipping": {
+      "title": "Envío",
+      "description": "¿Adónde enviamos tu pedido?",
+      "addressTitle": "Dirección de envío",
+      "methodTitle": "Método de envío",
+      "methodsEmpty": "Sin métodos de envío disponibles para esta dirección.",
+      "selectMethod": "Selecciona un método de envío.",
+      "fullName": "Nombre completo",
+      "company": "Empresa (opcional)",
+      "streetLine1": "Calle",
+      "streetLine2": "Piso, etc.",
+      "city": "Ciudad",
+      "postalCode": "Código postal",
+      "province": "Provincia (opcional)",
+      "country": "País",
+      "phone": "Teléfono (opcional)",
+      "required": "Obligatorio.",
+      "submit": "Continuar al pago",
+      "submitting": "Guardando…"
+    },
+    "payment": {
+      "title": "Pago",
+      "description": "Elige un método de pago. Completarás el pago en la página segura del proveedor.",
+      "methodsTitle": "Método de pago",
+      "methodsEmpty": "Sin métodos de pago disponibles ahora mismo.",
+      "selectMethod": "Selecciona un método de pago.",
+      "hostedRedirectNote": "Te redirigiremos al proveedor de pago para completar tu compra de forma segura.",
+      "submit": "Continuar al pago",
+      "submitting": "Redirigiendo…",
+      "consentRequired": "Confirme que ha leído los Términos y la Política de privacidad."
+    },
+    "confirmation": {
+      "title": "Pedido confirmado.",
+      "description": "Gracias. Te hemos enviado un recibo del pedido {code}.",
+      "viewOrders": "Ver todos los pedidos"
+    },
+    "consent": {
+      "label": "He leído los <terms>Términos y condiciones</terms> y la <privacy>Política de privacidad</privacy> y acepto ambos."
+    },
+    "withdrawal": {
+      "title": "Derecho de desistimiento de 14 días",
+      "body": "Puede cancelar este pedido en los 14 días posteriores a la recepción, sin necesidad de justificación. Lea las <link>condiciones completas de desistimiento</link> antes de enviar."
+    }
+  },
+  "errors": {
+    "title": "Algo salió mal",
+    "description": "Se produjo un error inesperado. Inténtalo de nuevo.",
+    "retry": "Reintentar",
+    "goHome": "Volver al inicio",
+    "generic": "Algo salió mal. Inténtalo de nuevo.",
+    "newsletter": {
+      "INVALID_EMAIL": "Introduce un correo válido.",
+      "BOT_DETECTED": "La verificación falló. Inténtalo de nuevo.",
+      "UPSTREAM_ERROR": "No podemos suscribirte ahora. Vuelve a intentarlo en un momento."
+    },
+    "vendure": {
+      "UNKNOWN_ERROR": "Algo salió mal. Inténtalo de nuevo.",
+      "NATIVE_AUTH_STRATEGY_ERROR": "El acceso no está disponible ahora.",
+      "INVALID_CREDENTIALS_ERROR": "Correo o contraseña incorrectos.",
+      "ORDER_STATE_TRANSITION_ERROR": "Este pedido no puede actualizarse ahora.",
+      "EMAIL_ADDRESS_CONFLICT_ERROR": "Este correo ya está registrado.",
+      "GUEST_CHECKOUT_ERROR": "El pago como invitado no está disponible.",
+      "ORDER_LIMIT_ERROR": "Este pedido ha alcanzado su límite.",
+      "NEGATIVE_QUANTITY_ERROR": "La cantidad no puede ser negativa.",
+      "INSUFFICIENT_STOCK_ERROR": "Stock insuficiente para la cantidad solicitada.",
+      "COUPON_CODE_INVALID_ERROR": "Este código no es válido.",
+      "COUPON_CODE_EXPIRED_ERROR": "Este código ha caducado.",
+      "COUPON_CODE_LIMIT_ERROR": "Este código se ha usado demasiadas veces.",
+      "ORDER_MODIFICATION_ERROR": "Este pedido ya no puede modificarse.",
+      "INELIGIBLE_SHIPPING_METHOD_ERROR": "Este método de envío no está disponible.",
+      "NO_ACTIVE_ORDER_ERROR": "No hay pedido activo que actualizar.",
+      "ORDER_INTERCEPTOR_ERROR": "No pudimos procesar el cambio.",
+      "ORDER_PAYMENT_STATE_ERROR": "El estado del pago impide este cambio.",
+      "INELIGIBLE_PAYMENT_METHOD_ERROR": "Este método de pago no está disponible.",
+      "PAYMENT_FAILED_ERROR": "El pago falló. Inténtalo de nuevo o usa otro método.",
+      "PAYMENT_DECLINED_ERROR": "Pago rechazado. Prueba otra tarjeta u otro método.",
+      "ALREADY_LOGGED_IN_ERROR": "Ya has iniciado sesión.",
+      "MISSING_PASSWORD_ERROR": "La contraseña es obligatoria.",
+      "PASSWORD_VALIDATION_ERROR": "La contraseña no cumple los requisitos.",
+      "PASSWORD_ALREADY_SET_ERROR": "Esta cuenta ya tiene contraseña.",
+      "VERIFICATION_TOKEN_INVALID_ERROR": "El enlace de verificación no es válido.",
+      "VERIFICATION_TOKEN_EXPIRED_ERROR": "El enlace de verificación ha caducado.",
+      "IDENTIFIER_CHANGE_TOKEN_INVALID_ERROR": "El enlace de cambio de correo no es válido.",
+      "IDENTIFIER_CHANGE_TOKEN_EXPIRED_ERROR": "El enlace de cambio de correo ha caducado.",
+      "PASSWORD_RESET_TOKEN_INVALID_ERROR": "El enlace de recuperación no es válido.",
+      "PASSWORD_RESET_TOKEN_EXPIRED_ERROR": "El enlace de recuperación ha caducado.",
+      "NOT_VERIFIED_ERROR": "Verifica tu correo antes de iniciar sesión.",
+      "MOLLIE_PAYMENT_INTENT_ERROR": "No pudimos iniciar el pago. Inténtalo de nuevo."
+    }
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "La página que buscas no existe o se ha movido.",
+    "goHome": "Volver al inicio"
+  },
+  "journal": {
+    "indexTitle": "Diario",
+    "indexEyebrow": "Historias del taller",
+    "indexDescription": "Diarios de entrenamiento, perfiles de atletas y notas de proceso desde el taller.",
+    "indexEmpty": "Aún no hay artículos — vuelve pronto.",
+    "readMore": "Leer",
+    "backToIndex": "Volver al diario",
+    "previousPage": "Anterior",
+    "nextPage": "Siguiente",
+    "pageIndicator": "Página {page} de {totalPages}",
+    "paginationLabel": "Paginación"
+  },
+  "story": {
+    "title": "Nuestra historia",
+    "eyebrow": "Sobre HURC"
+  },
+  "studio": {
+    "disabled": "El estudio editorial no está configurado en este entorno."
+  },
+  "consent": {
+    "manageButton": "Gestionar cookies",
+    "notice": {
+      "description": "Utilizamos cookies y tecnologías similares para las funciones esenciales del sitio y, con su consentimiento, para análisis y marketing.",
+      "learnMore": "Gestionar preferencias"
+    },
+    "modal": {
+      "title": "Preferencias de privacidad",
+      "description": "Elija qué servicios opcionales se ejecutan durante su visita. Puede cambiar esto en cualquier momento desde el pie de página."
+    },
+    "services": {
+      "functional": {
+        "title": "Funcionales",
+        "description": "Cesta, inicio de sesión, idioma y estado del consentimiento. Necesarios para el funcionamiento del sitio — activos independientemente de su elección."
+      },
+      "plausible": {
+        "title": "Plausible Analytics",
+        "description": "Recuento de visitas agregado y sin cookies, alojado en la UE. Ningún dato personal sale de la UE."
+      },
+      "posthog": {
+        "title": "Análisis de producto (PostHog)",
+        "description": "Nos ayuda a entender qué funciones se utilizan y dónde falla el sitio. Los datos permanecen en la UE."
+      },
+      "sentry": {
+        "title": "Monitorización de errores (Sentry)",
+        "description": "Captura errores en tiempo de ejecución para que podamos corregirlos. Los datos permanecen en la UE; sin detalles de pedido o pago."
+      },
+      "klaviyo": {
+        "title": "Marketing (Klaviyo)",
+        "description": "Correos de marketing y recomendaciones personalizadas. Procesamiento en EE. UU. bajo cláusulas contractuales tipo."
+      }
+    },
+    "actions": {
+      "acceptAll": "Aceptar todo",
+      "acceptSelected": "Aceptar selección",
+      "decline": "Rechazar todo",
+      "save": "Guardar preferencias",
+      "close": "Cerrar"
+    },
+    "privacyPolicy": {
+      "name": "política de privacidad",
+      "text": "Para más detalles, consulte nuestra {privacyPolicy}."
+    }
+  },
+  "legal": {
+    "shell": {
+      "eyebrow": "Aviso legal",
+      "translationPending": "Esta página se muestra en inglés mientras se realiza la traducción profesional."
+    },
+    "titles": {
+      "imprint": "Aviso legal",
+      "terms": "Términos y condiciones",
+      "privacy": "Política de privacidad",
+      "cookies": "Política de cookies",
+      "withdrawal": "Derecho de desistimiento"
+    }
+  }
+}

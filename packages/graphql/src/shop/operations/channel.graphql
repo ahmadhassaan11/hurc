@@ -1,0 +1,38 @@
+fragment ChannelFields on Channel {
+  id
+  code
+  token
+  defaultLanguageCode
+  availableLanguageCodes
+  defaultCurrencyCode
+  availableCurrencyCodes
+  pricesIncludeTax
+  defaultTaxZone {
+    id
+    name
+  }
+  defaultShippingZone {
+    id
+    name
+  }
+}
+
+fragment CountryFields on Country {
+  id
+  code
+  name
+  enabled
+  languageCode
+}
+
+query ActiveChannel {
+  activeChannel {
+    ...ChannelFields
+  }
+}
+
+query AvailableCountries {
+  availableCountries {
+    ...CountryFields
+  }
+}

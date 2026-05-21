@@ -1,0 +1,48 @@
+name: Lighthouse CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, labeled]
+
+concurrency:
+  group: lighthouse-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lighthouse:
+    name: lhci collect + assert
+    runs-on: ubuntu-24.04
+    if: github.event_name == 'push' || contains(github.event.pull_request.labels.*.name, 'lhci')
+    env:
+      NEXT_PUBLIC_VENDURE_SHOP_API_URL: http://localhost:3001/shop-api
+      VENDURE_SHOP_API_URL_INTERNAL: http://localhost:3001/shop-api
+      NEXT_PUBLIC_SITE_URL: http://localhost:3100
+      NEXT_PUBLIC_PLAUSIBLE_DOMAIN: hurc.test
+      NEXT_PUBLIC_POSTHOG_KEY: phc_ci
+      NEXT_PUBLIC_POSTHOG_HOST: https://eu.posthog.com
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.0.3
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - name: Run Lighthouse CI
+        run: pnpm lhci:check
+        env:
+          # Push-to-main escalates assertion failures to error. PR-mode keeps
+          # warnings as warnings to absorb runner-noise on synthetic INP.
+          LHCI_BUILD_CONTEXT__CURRENT_BRANCH: ${{ github.head_ref || github.ref_name }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lighthouse-results
+          path: .lighthouseci
+          retention-days: 14
